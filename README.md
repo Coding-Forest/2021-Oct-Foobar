@@ -10,6 +10,8 @@ All the information and code here are purely for learning purposes only.
 In case you are overwhelmed with the interface and don't even know where you can actually read the probelm... the solution is here (I spent more than an hour looking for how to access the directory with the challenge at 2 am in the morning... I don't want anybody to do the same.):
 
     cd yourID
+    cd project-folder-name
     ls
+    cat readme.txt
     
  ![foobar access](https://github.com/Coding-Forest/2021-Oct-Foobar/blob/main/Images/foobar%20access%20problem.png)
