@@ -45,3 +45,37 @@ def solution(h, q):
 """
 Visible logic assurance code is the separate folder Studies.
 """
+
+# Without notes
+def solution(h, q):
+
+    p = []
+    height = copy.deepcopy(h)
+
+    for i in range(len(q)):
+
+        h = height          
+        parent = 2 ** h - 1
+        
+        if q[i] == parent:
+            p.append(-1)
+            
+        else:
+            while h > 0:
+                h -= 1
+                left = parent - 2 ** h
+                right = parent - 1
+
+                if (q[i] == left or q[i] == right):
+                    p.append(parent)
+                    break
+
+                else:
+                    if q[i] < left:
+                        parent = left
+                    else:
+                        parent = right
+
+    return p
+ 
+    
