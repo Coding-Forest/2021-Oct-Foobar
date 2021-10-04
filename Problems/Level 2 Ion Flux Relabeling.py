@@ -20,13 +20,11 @@ def solution(h, q):
         else:
             # search through the tree from top down until the target value is found.
             while h > 0:
-                # while step 1
                 # Set the parent, left and right child node values.
                 h -= 1
                 left = parent - 2 ** h
                 right = parent - 1
 
-                # while step 2
                 # if the value is found, append the parent and break out of the while, jump to the next for iteration.
                 if (q[i] == left or q[i] == right):
                     p.append(parent)
