@@ -1,21 +1,23 @@
+# key algorithm: indexing with two index variables i & j 
+
 import numpy as np 
 
 def answer(I, t):
     
     sub_list = []
-    sum = 0
-    
-    for i in range(len(I)):
-        for j in range(i+1, len(I)+1):
+    sum = 0                              # compare against the target integer t
+
+    for i in range(len(I)):              # start index
+        for j in range(i+1, len(I)+1):   # end index. initial j should be always greater than initial i by 1. 
             sum = np.sum(I[i: j])
 
             if sum == t:
                 sub_list = [i, j-1]
-                return sub_list 
-            else: continue
+                return sub_list          # if found the match, return the index list and break out of the code.
+            else: continue               # continue the nested for loop until the desired indexing is found.
 
-    if sub_list == []:
-        sub_list = [-1, -1]
+    if sub_list == []:                   # Final check: if indexing is not found, 
+        sub_list = [-1, -1]              # return the null case index. 
     return sub_list 
         
 
